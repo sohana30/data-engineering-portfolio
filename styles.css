@@ -672,8 +672,10 @@ footer {
 
     /* Project Details Responsive */
     .project-showcase {
-        margin: 80px auto 40px;
-        padding: 0 20px;
+        margin: 60px auto 20px;
+        /* Reduced top/bottom margins */
+        padding: 0 15px;
+        /* Slightly reduced side padding */
     }
 
     .content-section {
