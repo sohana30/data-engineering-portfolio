@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     document.getElementById('current-year').textContent = new Date().getFullYear();
     initMobileNav();
+    initSkillBars();
 });
 
 function initCanvas() {
@@ -166,5 +167,39 @@ function initMobileNav() {
             navLinks.classList.remove('active');
             hamburger.classList.remove('toggle');
         });
+    });
+}
+
+// Skill Bars Animation
+function initSkillBars() {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar = entry.target.querySelector('.skill-progress');
+                const progress = progressBar.getAttribute('data-progress');
+
+                // Animate the progress bar
+                setTimeout(() => {
+                    progressBar.style.width = progress + '%';
+                }, 100);
+
+                // Add in-view class
+                entry.target.classList.add('in-view');
+
+                // Stop observing this element
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    skillItems.forEach(item => {
+        observer.observe(item);
     });
 }
