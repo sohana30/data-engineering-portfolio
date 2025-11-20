@@ -522,14 +522,15 @@ footer {
     }
 
     .nav-links li {
-        opacity: 0;
-        transform: translateX(20px);
-        transition: all 0.5s ease;
+        /* Removed opacity animation to fix visibility issue */
+        margin: 20px 0;
     }
 
-    .nav-links.active li {
-        opacity: 1;
-        transform: translateX(0);
+
+
+    .nav-links a {
+        font-size: 1.2rem;
+        color: var(--text-primary);
     }
 
     /* Layout Adjustments */
