@@ -435,6 +435,25 @@ footer {
     color: var(--accent);
 }
 
+/* Contact Links */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
