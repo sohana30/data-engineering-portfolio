@@ -106,16 +106,20 @@ section {
 
 h1 {
     font-size: 5rem;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 10px;
     color: var(--text-primary);
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 h2 {
     font-size: 4rem;
-    line-height: 1.1;
+    line-height: 1.2;
     color: var(--text-secondary);
     margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .subtitle {
@@ -123,6 +127,7 @@ h2 {
     color: var(--text-secondary);
     font-size: 1.2rem;
     margin-bottom: 50px;
+    line-height: 1.8;
 }
 
 .cta-btn {
@@ -215,9 +220,10 @@ h2 {
 
 .section-header h3 {
     font-family: var(--font-mono);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--text-primary);
     margin-right: 20px;
+    letter-spacing: 0.05em;
 }
 
 .line {
@@ -239,6 +245,7 @@ h2 {
     margin-bottom: 20px;
     color: var(--text-secondary);
     font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .stats-block {
