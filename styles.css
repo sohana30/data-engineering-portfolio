@@ -526,6 +526,31 @@ footer {
     line-height: 1.6;
 }
 
+.job-type {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-weight: normal;
+    border: 1px solid currentColor;
+    font-family: var(--font-mono);
+}
+
+.job-type.full-time {
+    color: #4ade80;
+    /* Green */
+    background: rgba(74, 222, 128, 0.1);
+    border-color: #4ade80;
+}
+
+.job-type.contract {
+    color: #fbbf24;
+    /* Amber */
+    background: rgba(251, 191, 36, 0.1);
+    border-color: #fbbf24;
+}
+
 /* Education Section */
 .education-grid {
     display: grid;
