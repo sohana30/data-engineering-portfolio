@@ -1,10 +1,13 @@
 :root {
-    --bg-color: #0a192f;
-    --bg-color-light: #112240;
-    --text-primary: #ccd6f6;
-    --text-secondary: #8892b0;
-    --accent: #64ffda;
-    --accent-glow: rgba(100, 255, 218, 0.1);
+    --bg-color: #0f172a;
+    --bg-color-light: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    /* Modern Sky Blue */
+    --accent-glow: rgba(56, 189, 248, 0.15);
+    --outline-color: #00ffff;
+    /* Cyan outline */
     --font-mono: 'JetBrains Mono', monospace;
     --font-sans: 'Inter', sans-serif;
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -631,6 +634,15 @@ footer {
     gap: 20px;
     margin-top: 30px;
     flex-wrap: wrap;
+}
+
+.btn-live {
+    background: linear-gradient(135deg, var(--accent), #0ea5e9);
+    color: var(--bg-color);
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-mono);
 }
 
 .btn-primary {
