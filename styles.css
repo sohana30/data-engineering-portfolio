@@ -686,8 +686,14 @@ footer {
         margin-bottom: 10px;
     }
 
+    .project-content {
+        gap: 20px;
+        /* Reduced gap between sections */
+    }
+
     .content-section {
-        padding: 25px 20px;
+        padding: 15px;
+        /* Compact padding */
         width: 100%;
         overflow-x: hidden;
         /* Prevent content spill */
