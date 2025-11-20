@@ -602,6 +602,9 @@ footer {
 
     .content-section {
         padding: 25px 20px;
+        width: 100%;
+        overflow-x: hidden;
+        /* Prevent content spill */
     }
 
     .content-section h2 {
@@ -614,9 +617,13 @@ footer {
         margin-top: 25px;
     }
 
-    .content-section p {
+    .content-section p,
+    .content-section li {
         font-size: 1rem;
         line-height: 1.7;
+        word-wrap: break-word;
+        /* Prevent long words from breaking layout */
+        max-width: 100%;
     }
 
     .content-section ul {
@@ -629,9 +636,17 @@ footer {
         padding-left: 20px;
     }
 
+    .code-preview {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 0.8rem;
+        /* Smaller font for code on mobile */
+    }
+
     .metrics-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+        width: 100%;
     }
 }
 
