@@ -458,24 +458,135 @@ footer {
 }
 
 /* Responsive */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+
+    /* Navigation */
+    .hamburger {
+        display: flex;
+        z-index: 101;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: var(--bg-color-light);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Layout Adjustments */
+    header {
+        padding: 20px 30px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    /* Typography */
     h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     h2 {
         font-size: 2rem;
     }
 
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    /* Components */
     .content-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    nav {
-        display: none;
+    .terminal-window {
+        margin: 0 -10px;
+        /* Slight bleed for terminal on mobile */
+        border-radius: 4px;
     }
 
-    /* Simplified for mobile */
+    .project-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-btn,
+    .btn-primary,
+    .btn-secondary,
+    .btn-live {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
 }
 
 /* Project Showcase Styles */

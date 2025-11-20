@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCanvas();
     initScrollAnimations();
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    initMobileNav();
 });
 
 function initCanvas() {
@@ -46,7 +47,7 @@ function initCanvas() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = '#64ffda';
+            ctx.fillStyle = '#38bdf8';
             ctx.fill();
         }
     }
@@ -74,7 +75,7 @@ function initCanvas() {
 
                 if (distance < connectionDistance) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(100, 255, 218, ${1 - distance / connectionDistance})`;
+                    ctx.strokeStyle = `rgba(56, 189, 248, ${1 - distance / connectionDistance})`;
                     ctx.lineWidth = 1;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -143,5 +144,27 @@ function startTypingEffect() {
                 }
             }, 10); // Typing speed
         }, index * 1000); // Delay between each block
+    });
+}
+
+
+function initMobileNav() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
+    }
+
+    // Close menu when clicking a link
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('toggle');
+        });
     });
 }
