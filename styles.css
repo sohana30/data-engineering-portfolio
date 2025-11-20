@@ -1537,23 +1537,6 @@ footer {
         perspective: 1000px;
     }
 
-    .nav-links li::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: -30px;
-        width: 20px;
-        height: 2px;
-        background: var(--accent);
-        transform: translateY(-50%) scaleX(0);
-        transition: transform 0.3s ease;
-        box-shadow: 0 0 10px var(--accent-glow);
-    }
-
-    .nav-links.active li::before {
-        transform: translateY(-50%) scaleX(1);
-    }
-
     /* Staggered Animation Delay */
     .nav-links.active li:nth-child(1) {
         transition-delay: 0.1s;
