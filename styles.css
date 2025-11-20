@@ -578,6 +578,10 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 5px;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .timeline-item:hover .timeline-content h4 {
@@ -607,13 +611,14 @@ footer {
 
 .job-type {
     font-size: 0.75rem;
-    padding: 2px 8px;
+    padding: 4px 10px;
     border-radius: 12px;
-    margin-left: 10px;
     vertical-align: middle;
     font-weight: normal;
     border: 1px solid currentColor;
     font-family: var(--font-mono);
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .job-type.full-time {
