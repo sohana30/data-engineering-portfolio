@@ -136,8 +136,8 @@ python -m http.server 8000
 
 - **Portfolio:** [sohana30.github.io/data-engineering-portfolio](https://sohana30.github.io/data-engineering-portfolio/)
 - **GitHub:** [@sohana30](https://github.com/sohana30)
-- **LinkedIn:** [Connect with me](https://linkedin.com/in/yourprofile)
-- **Email:** your.email@example.com
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/sohana-727553118/)
+- **Email:** sohanaakadiwala@gmail.com
 
 ---
 
