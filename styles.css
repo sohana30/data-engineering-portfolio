@@ -63,6 +63,13 @@ header {
     font-weight: bold;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -472,6 +479,18 @@ footer {
     height: 3px;
     background-color: var(--accent);
     transition: var(--transition);
+}
+
+.hamburger.toggle span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Responsive Design */
