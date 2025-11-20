@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Dev | Data Engineer</title>
+    <meta name="description"
+        content="Portfolio of a Senior Data Engineer specializing in Big Data, ETL, and Cloud Architectures.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav>
+            <div class="logo">&lt;DE/&gt;</div>
+            <ul>
+                <li><a href="#about">_about</a></li>
+                <li><a href="#skills">_stack</a></li>
+                <li><a href="#projects">_pipelines</a></li>
+                <li><a href="#contact">_connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <p class="terminal-text"><span class="prompt">></span> Welcome to my portfolio</p>
+                <h1 class="glitch" data-text="DATA ENGINEER">DATA ENGINEER</h1>
+                <h2>Transforming Data into Business Value</h2>
+                <p class="subtitle">Technical professional with 5+ years of experience in software development, database
+                    optimization, and cloud analytics. Currently specializing in ETL pipelines and data transformation
+                    using Snowflake and AWS.</p>
+                <a href="#projects" class="cta-btn">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-header">
+                <h3>01. // TRANSITION_STORY</h3>
+                <div class="line"></div>
+            </div>
+            <div class="content-grid">
+                <div class="text-block">
+                    <p>As a <strong>Technical Business Analyst & Developer</strong>, I've spent years building scalable
+                        web applications, optimizing databases, and analyzing data to drive business decisions. Now, I'm
+                        channeling that expertise into <strong>data engineering</strong>.</p>
+                    <p>My background in <strong>SQL optimization, cloud platforms (Snowflake, AWS), testing automation,
+                            and Agile workflows</strong> gives me a unique edge in building reliable, production-grade
+                        data pipelines.</p>
+                    <p>Currently working as a <strong>Data Contractor at Alloy.ai</strong>, where I leverage Snowflake
+                        to extract, transform, and prepare data for enterprise analytics.</p>
+                </div>
+                <div class="stats-block">
+                    <div class="stat">
+                        <span class="number">5+</span>
+                        <span class="label">Years Dev Exp</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">SQL</span>
+                        <span class="label">Snowflake Expert</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">Agile</span>
+                        <span class="label">Certified Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <h3>02. // TECH_STACK</h3>
+                <div class="line"></div>
+            </div>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="buttons">
+                        <span class="close"></span>
+                        <span class="minimize"></span>
+                        <span class="maximize"></span>
+                    </div>
+                    <div class="title">root@server:~/skills</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">root@server:~$</span> cat data_languages.json
+                    </div>
+                    <div class="output type-effect" data-text='[ "SQL", "Python", "JavaScript", "PHP", "Java", "C++" ]'>
+                        [ "SQL", "Python", "JavaScript", "PHP", "Java", "C++" ]
+                    </div>
+
+                    <div class="command-line">
+                        <span class="prompt">root@server:~$</span> list --cloud-data-platforms
+                    </div>
+                    <div class="output type-effect"
+                        data-text="> Snowflake Cloud Data Platform\n> AWS (Cloud Computing)\n> Firebase\n> MySQL / MongoDB">
+                        > Snowflake Cloud Data Platform
+                        > AWS (Cloud Computing)
+                        > Firebase
+                        > MySQL / MongoDB
+                    </div>
+
+                    <div class="command-line">
+                        <span class="prompt">root@server:~$</span> check --frameworks-tools
+                    </div>
+                    <div class="output type-effect"
+                        data-text="[OK] React.js, Next.js, Vue.js, Node.js\n[OK] Docker, Git/GitFlow\n[OK] Drupal, Laravel, MERN/MEVN\n[OK] Cypress, Playwright, Selenium">
+                        [OK] React.js, Next.js, Vue.js, Node.js
+                        [OK] Docker, Git/GitFlow
+                        [OK] Drupal, Laravel, MERN/MEVN
+                        [OK] Cypress, Playwright, Selenium
+                    </div>
+
+                    <div class="command-line">
+                        <span class="prompt">root@server:~$</span> scan --data-engineering-skills
+                    </div>
+                    <div class="output type-effect"
+                        data-text="> ETL/Data Transformation (Snowflake)\n> Complex SQL Query Optimization\n> Data Quality & Testing (JUnit, Selenium)\n> Agile/Scrum Workflows (Jira, Confluence)">
+                        > ETL/Data Transformation (Snowflake)
+                        > Complex SQL Query Optimization
+                        > Data Quality & Testing (JUnit, Selenium)
+                        > Agile/Scrum Workflows (Jira, Confluence)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <h3>03. // DATA_ENGINEERING_PROJECTS</h3>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="folder-icon">📁</span>
+                        <div class="links">
+                            <a href="projects/snowflake-etl-pipeline/index.html" target="_blank">View Project</a>
+                            <a href="projects/snowflake-etl-pipeline/src/" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    <h4>Snowflake ETL Pipeline (Production)</h4>
+                    <p>Production ETL system processing retail data using Snowflake Cloud Platform. Wrote complex SQL
+                        queries for data transformation, validation, and multi-department reporting with 99.9% accuracy.
+                    </p>
+                    <ul class="tags">
+                        <li>Snowflake</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>ETL</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="folder-icon">📁</span>
+                        <div class="links">
+                            <a href="#">Git</a>
+                        </div>
+                    </div>
+                    <h4>Automated Testing Framework for Data Pipelines</h4>
+                    <p>Built comprehensive test automation suite using Selenium, Cypress, and Playwright. Ensures data
+                        integrity across web applications and APIs with 95% code coverage.</p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Selenium</li>
+                        <li>Cypress</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="folder-icon">📁</span>
+                        <div class="links">
+                            <a href="#">Git</a>
+                        </div>
+                    </div>
+                    <h4>Real-Time Analytics Dashboard</h4>
+                    <p>Full-stack analytics platform using React.js, Node.js, and MongoDB. Visualizes business metrics
+                        in real-time with optimized database queries reducing load time by 60%.</p>
+                    <ul class="tags">
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                        <li>REST API</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="folder-icon">📁</span>
+                        <div class="links">
+                            <a href="#">Git</a>
+                        </div>
+                    </div>
+                    <h4>Cloud Migration & Data Warehouse Optimization</h4>
+                    <p>Migrated legacy MySQL databases to AWS cloud infrastructure. Implemented Docker containerization
+                        and optimized queries, reducing operational costs by 35%.</p>
+                    <ul class="tags">
+                        <li>AWS</li>
+                        <li>Docker</li>
+                        <li>MySQL</li>
+                        <li>Performance Tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-header">
+                <h3>04. // ESTABLISH_UPLINK</h3>
+                <div class="line"></div>
+            </div>
+            <div class="contact-content">
+                <p>Currently open for new opportunities. Whether you have a question or just want to discuss big data
+                    architectures, my inbox is open.</p>
+                <a href="mailto:hello@example.com" class="cta-btn">Ping Me</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@copyright <span id="current-year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

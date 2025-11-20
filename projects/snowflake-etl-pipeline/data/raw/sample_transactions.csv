@@ -1,0 +1,6 @@
+transaction_id,customer_id,product_id,product_name,category,quantity,unit_price,total_amount,transaction_date,store_id,payment_method
+TXN001,CUST1001,PROD501,Laptop,Electronics,1,899.99,899.99,2024-01-15 10:30:00,STORE01,Credit Card
+TXN002,CUST1002,PROD502,Wireless Mouse,Electronics,2,29.99,59.98,2024-01-15 11:45:00,STORE01,Debit Card
+TXN003,CUST1003,PROD503,Office Chair,Furniture,1,249.99,249.99,2024-01-15 14:20:00,STORE02,Cash
+TXN004,CUST1001,PROD504,USB Cable,Electronics,3,12.99,38.97,2024-01-16 09:15:00,STORE01,Credit Card
+TXN005,CUST1004,PROD505,Desk Lamp,Furniture,1,45.50,45.50,2024-01-16 16:30:00,STORE03,PayPal
