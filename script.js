@@ -296,52 +296,37 @@ function initScrollToTop() {
 
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    const statusDiv = document.querySelector('.form-status');
-    const submitBtn = form.querySelector('.submit-btn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoading = submitBtn.querySelector('.btn-loading');
-
-    if (!form) return;
+    const statusDiv = document.querySelector('.form-status'); // now correctly selected
+    const loadingSpan = form.querySelector('.btn-loading');
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        loadingSpan.style.display = 'inline-block';
+        statusDiv.textContent = ''; // clear previous messages
 
-        // Show loading state
-        submitBtn.disabled = true;
-        btnText.style.display = 'none';
-        btnLoading.style.display = 'inline';
-        statusDiv.className = 'form-status';
-        statusDiv.textContent = '';
-
+        const formData = new FormData(form);
         try {
-            const formData = new FormData(form);
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             });
 
             if (response.ok) {
-                // Success
+                statusDiv.textContent = '✅ Message sent successfully!';
                 statusDiv.className = 'form-status success';
-                statusDiv.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
                 form.reset();
             } else {
-                // Error
-                statusDiv.className = 'form-status error';
-                statusDiv.textContent = '✗ Oops! Something went wrong. Please try again.';
+                throw new Error('Network response was not ok');
             }
-        } catch (error) {
-            // Network error
+        } catch (err) {
+            statusDiv.textContent = '❌ Something went wrong. Please try again.';
             statusDiv.className = 'form-status error';
-            statusDiv.textContent = '✗ Network error. Please check your connection and try again.';
         } finally {
-            // Reset button state
-            submitBtn.disabled = false;
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
+            loadingSpan.style.display = 'none';
         }
     });
 }
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initContactForm);
