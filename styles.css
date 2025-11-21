@@ -1696,6 +1696,25 @@ footer {
     margin-top: 20px;
 }
 
+@media (max-width: 599px) {
+    .challenges-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .challenge-card {
+        padding: 20px;
+    }
+
+    .challenge-card h3 {
+        font-size: 1rem;
+    }
+
+    .challenge-card p {
+        font-size: 0.9rem;
+    }
+}
+
 .challenge-card {
     background: rgba(30, 41, 59, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.18);
