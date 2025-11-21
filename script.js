@@ -306,18 +306,21 @@ function initContactForm() {
 
         const formData = new FormData(form);
         try {
+            const recaptchaToken = formData.get('g-recaptcha-response');
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
             });
-
+            const responseJson = await response.json();
             if (response.ok) {
                 statusDiv.textContent = '✅ Message sent successfully!';
                 statusDiv.className = 'form-status success';
                 form.reset();
             } else {
-                throw new Error('Network response was not ok');
+                // Show error from Formspree if available
+                const errorMsg = responseJson.error || 'Something went wrong. Please try again.';
+                throw new Error(errorMsg);
             }
         } catch (err) {
             statusDiv.textContent = '❌ Something went wrong. Please try again.';
