@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSkillBars();
     initHeaderScroll();
     initActiveNav();
+    initScrollToTop();
 });
 
 function initCanvas() {
@@ -149,8 +150,8 @@ function startTypingEffect() {
                         output.innerHTML = output.textContent.replace(/\[OK\]/g, '<span class="success">[OK]</span>');
                     }
                 }
-            }, 10); // Typing speed
-        }, index * 1000); // Delay between each block
+            }, 5); // Typing speed - faster for better engagement
+        }, index * 600); // Delay between each block - shorter for better flow
     });
 }
 
@@ -265,6 +266,29 @@ function initActiveNav() {
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
             }
+        });
+    });
+}
+
+function initScrollToTop() {
+    const scrollBtn = document.getElementById('scroll-top');
+
+    if (!scrollBtn) return;
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+
+    // Scroll to top on click
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 }
