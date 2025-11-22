@@ -285,7 +285,8 @@ echo "Ready for deployment."`
 
         // Reset display
         codeDisplay.innerHTML = '';
-        updateLineNumbers(file.content);
+        lineNumbers.innerHTML = '<span>1</span>'; // Start with line 1
+
 
         // Start typing effect
         typeContent(file.content, file.type);
@@ -299,21 +300,29 @@ echo "Ready for deployment."`
     }
 
     function updateLineNumbers(content) {
-        const lines = content.split('\\n').length;
+        const lines = content.split('\n').length;
         lineNumbers.innerHTML = Array(lines).fill(0).map((_, i) => `<span>${i + 1}</span>`).join('');
     }
 
     function typeContent(content, type) {
         let i = 0;
+        let currentLine = 1;
         // Faster typing for better UX
-        const speed = 2;
+        const speed = 15;
 
         currentTypeInterval = setInterval(() => {
             if (i < content.length) {
                 const char = content.charAt(i);
                 codeDisplay.textContent += char;
-                // Basic syntax highlighting applied after typing each char would be too heavy
-                // So we apply it at the end or use a simpler approach
+
+                // Add new line number when a newline character is typed
+                if (char === '\n') {
+                    currentLine++;
+                    const span = document.createElement('span');
+                    span.textContent = currentLine;
+                    lineNumbers.appendChild(span);
+                }
+
                 i++;
 
                 // Auto scroll to bottom
